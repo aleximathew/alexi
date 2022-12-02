@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Frank+Ruhl+Libre:wght@400;700&family=Work+Sans&display=swap');
+
+/*
+font-family: 'Anton', sans-serif;
+font-family: 'Frank Ruhl Libre', serif;
+font-family: 'Work Sans', sans-serif;
+font-family: 'Bebas Neue', cursive;
+*/
+body {
+    margin: 0 auto;
+    background: black;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+}
+
+ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.logo {
+    width: 60px;
+    height: 40px;
+    display: block;
+    background: url(../img/logo.png)no-repeat center center;
+    background-size: contain;
+}
+
+.menuList {
+    display: none;
+}
+
+.menuOpen {
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: block;
+    background: url(../img/menu.svg)no-repeat center center;
+    background-size: contain;
+}
+
+.menuClose {
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 22;
+    display: block;
+    background: url(../img/menuClose.svg)no-repeat center center;
+    background-size: contain;
+}
+
+
+.navSection {
+    display: block;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.orange_clr {
+    color: #F5971C
+}
+
+
+.landingFold {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(../img/landing.png)no-repeat center center;
+    background-size: 200%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Anton', sans-serif;
+}
+
+.landingContent {
+    position: absolute;
+    bottom: 10vh;
+    left: 35px;
+    width: auto;
+}
+
+.landingHeading {
+    width: auto;
+    font-family: 'Anton', sans-serif;
+    display: inline-block;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px 0px;
+    line-height: 60px;
+    overflow: hidden;
+}
+
+.landingHeading span {
+    display: inline-block;
+    animation: titleAnim 2s ease-in-out;
+    margin-bottom: 0;
+    line-height: 60px;
+    animation-delay: 0s;
+    transform: translateX(300%);
+    animation-fill-mode: forwards;
+}
+
+@keyframes titleAnim {
+    0% {
+        transform: translateX(300%);
+    }
+
+    25% {
+        transform: translateX(300%);
+    }
+
+    100% {
+        transform: translateX(00%);
+    }
+}
+
+
+.maskLayer {
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.whiteAnimation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: white;
+    animation: slideAnim 2s ease-in-out;
+    transform: translateX(-102%);
+}
+
+@keyframes slideAnim {
+    0% {
+        transform: translateX(-102%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.tagLine {
+    font-size: 18px;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    width: 80%;
+    margin-bottom: 0px;
+    animation: opacityAnim 1s ease-in;
+    animation-delay: 1.8s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    display: inline-block;
+    position: relative;
+}
+
+@keyframes opacityAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.menuSlideWrap {
+    height: 50vh;
+    width: 100%;
+    overflow: hidden !important;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    position: absolute;
+    z-index: 1;
+}
+
+.popMenu {
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    bottom: 0;
+    background: white;
+    padding: 45px;
+    font-size: 22px;
+    font-family: 'Bebas Neue', cursive;
+    bottom: -100vh;
+}
+
+.menuWrap {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.orange_clr {
+    color: #F5971C !important;
+}
+
+.mob_menu {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.popMenu a {
+    text-decoration: none !important;
+    color: black;
+}
+
+.socialLinks {
+    margin-bottom: 0;
+    margin-top: 5vh;
+}
+
+.socialLinks li {
+    margin-right: 20px;
+}
+
+.socialLinks li:last-child {
+    margin-right: 00px;
+}
+
+.menuAnimation {
+    animation: fromBottom;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.02, .78, .3, .96);
+    animation-fill-mode: forwards;
+}
+
+@keyframes fromBottom {
+    0% {
+        bottom: -100vh;
+    }
+
+    100% {
+        bottom: 0vh;
+    }
+}
+
+.menuAnimationRemove {
+    animation: toBottom;
+    animation-duration: .8s;
+    animation-timing-function: cubic-bezier(.78, .05, 1, .27);
+    animation-fill-mode: forwards
+}
+
+@keyframes toBottom {
+    0% {
+        bottom: 00vh;
+    }
+
+    100% {
+        bottom: -100vh;
+    }
+}
+
+.sectionBox {
+    padding: 35px;
+}
+
+.introPara {
+    font-size: 18px;
+    font-family: 'Frank Ruhl Libre', serif;
+    line-height: 24px;
+    margin-bottom: 100px;
+}
+
+.skillWrap {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 0px;
+}
+
+
+.subhead {
+    font-family: 'Frank Ruhl Libre', serif;
+    color: #636363;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.skillsList li {
+    font-size: 16px;
+}
+
+.skillsList,
+.experienceList {
+    display: block;
+
+}
+
+.experience {
+    margin: 50px 0;
+}
+
+.expHeading {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.companyName {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.workHeading {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.years,
+.clientName {
+    color: #636363;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.experienceList li {
+    border-bottom: 1px solid #636363;
+    padding: 20px 0px;
+}
+
+.experienceList li:last-child {
+    border-bottom: none;
+}
+
+.clients {
+    align-items: center;
+}
+
+.clientList {
+    padding: 20px;
+}
+
+.clientList img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.workArea img {
+    border-radius: 10px;
+}
+
+.workArea {
+    margin: 20px 0;
+}
+
+.sideHeadings {
+    margin: 100px 0 25px 0;
+}
+
+.lenovoCable {
+    height: 50vh;
+    object-fit: cover;
+}
+
+.portfolioBtn {
+    padding: 10px 20px;
+    background: none;
+    text-decoration: none;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    box-shadow: 8px 8px 0px 0px white;
+    transition: all .5s ease;
+    transform-origin: bottom right;
+    font-size: 12px;
+    display: inline-block;
+    margin: 20px auto;
+}
+
+.portfolioBtn:hover {
+    color: white;
+    text-decoration: none !important;
+    box-shadow: 5px 5px 0px 0px white;
+}
+
+.handImg {
+    width: auto;
+    height: 200px;
+    object-fit: contain;
+    position: relative;
+
+}
+
+.marginTop50 {
+    margin-top: 50px;
+}
+
+.status {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: 'Frank Ruhl Libre', serif;
+}
+
+.contactBtn {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+    .menuOpen,
+    .menuClose {
+        display: none;
+    }
+
+    .menuList {
+        display: block;
+    }
+
+    .menuSlideWrap {
+        display: none;
+    }
+
+    .navSection {
+        width: 200px;
+        height: 100vh;
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 0;
+        left: 0;
+    }
+
+    .landingFold,
+    .sectionBox {
+        width: calc(100% - 200px);
+        position: relative;
+        margin: auto 0 auto auto;
+    }
+
+    .landingHeading {
+        font-size: 100px;
+        text-align: right;
+        line-height: 100px;
+        padding: 0;
+        margin: 0;
+        left: 0;
+    }
+
+    .landingContent {
+        left: auto;
+        right: 0%;
+    }
+
+    .landingHeading {
+        display: block;
+    }
+
+    .tagLine {
+        text-align: right;
+    }
+
+    .menuList ul {
+        display: block;
+    }
+
+    .menuList ul li a,
+    .menuList ul li a:active,
+    .menuList ul li a:visited,
+    .menuList ul li a:focus,
+    .downloadBtn {
+        font-size: 22px;
+        font-family: 'Bebas Neue', cursive;
+        color: white;
+        text-decoration: none;
+        transition: all .3s ease;
+        position: relative;
+        padding-left: 0;
+        margin: 20px 0;
+        display: block;
+    }
+
+    .menuList ul li a:hover,
+    .downloadBtn:hover {
+        padding-left: 10px;
+        text-decoration: line-through;
+    }
+
+    .navSection .socialLinks li a {
+        color: white;
+    }
+
+    .introPara {
+        width: 80%;
+    }
+
+    .skillWrap {
+        display: flex;
+        flex-direction: row;
+        margin: 50px auto;
+    }
+
+    .experience {
+        margin: 0 auto;
+    }
+
+    .clientList {
+        padding: 30px;
+    }
+
+    .portfolioBtn {
+        display: block;
+        text-align: center;
+        width: 200px;
+    }
+
+    .contact {
+        width: 100%;
+        display: flex;
+    }
+
+    .handImg {
+        width: 20%;
+        float: left;
+    }
+
+    .contactCopy {
+        width: 80%;
+    }
+}
